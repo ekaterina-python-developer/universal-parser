@@ -53,6 +53,6 @@
 	}
 	```
 
+## Разработчик
 
-
-
+[Екатерина Понурова](https://github.com/ekaterina-python-developer)
