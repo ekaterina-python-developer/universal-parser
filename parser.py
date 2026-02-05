@@ -2,15 +2,14 @@ import asyncio
 import re
 from datetime import timedelta
 
-from routes import router
-
 from crawlee.crawlers import PlaywrightCrawler
 
-
-URL_REG = r'^https?://[^\s/$.?#].[^\s]*$'
+from constants import URL_REG
+from routes import router
 
 
 async def main() -> None:
+    """Инициализирует краулер и выводит результат парсинга."""
     start_url = input('Введите адрес сайта: ').strip().strip('\'"')
 
     if not start_url:
@@ -29,13 +28,13 @@ async def main() -> None:
             request_handler_timeout=timedelta(seconds=30),
         )
         await crawler.run([start_url])
-
         base_data = await crawler.get_data()
 
-        def collect_user_data(user_data):
+        def collect_user_data(key_name: str) -> list[str]:
+            """Извлекает уникальные значения из результатов парсинга по ключу."""
             data_set = set()
             for item in base_data.items:
-                for value in item.get(user_data):
+                for value in item.get(key_name):
                     data_set.add(value)
             return list(data_set) if data_set else []
 
