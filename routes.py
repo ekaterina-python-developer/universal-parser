@@ -22,16 +22,14 @@ async def user_data_handler(context: PlaywrightCrawlingContext) -> None:
     context.log.info(f'Парсим страницу: {context.request.url}')
 
     url = context.request.url
-
     page_content = await context.page.content()
-
     links = await context.page.locator('a').all()
+
     link_list = []
     for link in links:
         href = await link.get_attribute('href')
         if href is not None:
             link_list.append(href.strip())
-
     links_str = ' '.join(link_list)
 
     data_str = page_content + ' ' + links_str
