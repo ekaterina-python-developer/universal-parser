@@ -45,19 +45,19 @@
 
 ## Результат
 По завершении работы программа выведет итоговый объект в консоль.
-   ```
+```
    {
     "url": "https://example.com",
     "emails": ["info@example.com"],
     "phones": ["79001234567"]
 	}
-	```
+```
 
 ## Используемые технологии
 
-Python 3.12
-Crawlee for Python
-Playwright
+- Python 3.12
+- Crawlee for Python
+- Playwright
 
 ## Разработчик
 
