@@ -1,0 +1,16 @@
+{
+  "unique_key": "https://sniper-search.ru",
+  "url": "https://sniper-search.ru/",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "state": 4
+    }
+  },
+  "retry_count": 0,
+  "no_retry": false,
+  "loaded_url": null,
+  "handled_at": "2026-02-05 20:56:14.897716+00:00"
+}

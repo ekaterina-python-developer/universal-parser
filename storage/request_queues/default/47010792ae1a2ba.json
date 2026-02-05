@@ -1,0 +1,19 @@
+{
+  "unique_key": "https://sniper-search.ru/blog",
+  "url": "https://sniper-search.ru/blog",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "enqueueStrategy": "same-domain",
+      "state": 4,
+      "crawlDepth": 1
+    },
+    "label": "user_data"
+  },
+  "retry_count": 0,
+  "no_retry": false,
+  "loaded_url": null,
+  "handled_at": "2026-02-05 20:56:18.304610+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "sequence_counter": 7,
+  "forefront_sequence_counter": 0,
+  "forefront_requests": {},
+  "regular_requests": {
+    "https://sniper-search.ru": 0,
+    "https://sniper-search.ru/education": 1,
+    "https://sniper-search.ru/payments": 2,
+    "https://sniper-search.ru/blog": 3,
+    "https://sniper-search.ru/contacts": 4,
+    "https://sniper-search.ru/blog/kak-nayti-i-proverit-postavschika-tovarov": 5,
+    "https://sniper-search.ru/app/settings/profile/subscription": 6
+  },
+  "in_progress_requests": [],
+  "handled_requests": [
+    "https://sniper-search.ru",
+    "https://sniper-search.ru/blog",
+    "https://sniper-search.ru/app/settings/profile/subscription",
+    "https://sniper-search.ru/contacts",
+    "https://sniper-search.ru/payments",
+    "https://sniper-search.ru/education",
+    "https://sniper-search.ru/blog/kak-nayti-i-proverit-postavschika-tovarov"
+  ]
+}
