@@ -17,38 +17,38 @@
 ## Установка
 
 1. **Создайте виртуальное окружение и активируйте его:**
-   ```
-   python -m venv venv
-   source venv/Scripts/activate  # Для Windows
-   source venv/bin/activate      # Для Linux/macOS
-   ```
+```
+python -m venv venv
+source venv/Scripts/activate  # Для Windows
+source venv/bin/activate      # Для Linux/macOS
+```
 2. **Установите основные зависимости:**
-   ```
-   pip install -r requirements.txt
-   ```
+ ```
+ pip install -r requirements.txt
+ ```
 3. **Установите браузер Chromium:**
-   ```
-   playwright install chromium
-   ```
+ ```
+ playwright install chromium
+ ```
 
 ## Запуск
 1. **Запустите основной скрипт из корня проекта:**
-   ```
-   python parser.py
-   ```
+```
+python parser.py
+```
 2. **В терминале появится приглашение к вводу:**
-   ```
-   Введите адрес сайта:
-   ```
+```
+Введите адрес сайта:
+```
 3. **Введите полный URL (обязательно с протоколом http:// или https://) и нажмите Enter:**
-   ```
-   https://example.com
-   ```
+```
+https://example.com
+```
 
 ## Запуск тестов
-   ```
-   pytest
-   ```
+```
+pytest
+```
 
 ## Результат
 По завершении работы программа выведет итоговый объект в консоль.
