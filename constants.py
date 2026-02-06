@@ -10,7 +10,7 @@ EXCLUDE_REG = [
     re.compile(r'.*\.(jpg|jpeg|png|zip)$'),
 ]
 EMAIL_REG = r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+'
-PHONE_REG = r'((?:\+7|8)[- _]*\(?\d{3}\)?[- _]*\d{3}[- _]*\d{2}[- _]*\d{2})'
+PHONE_REG = r'((?:\+7|7|8)[- _]*\(?\d{3}\)?[- _]*\d{3}[- _]*\d{2}[- _]*\d{2})'
 
 BASE_OPTIONS = {
     'strategy': 'same-domain',

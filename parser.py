@@ -6,6 +6,7 @@ from crawlee.crawlers import PlaywrightCrawler
 
 from constants import URL_REG
 from routes import router
+from utils import collect_user_data
 
 
 async def main() -> None:
@@ -30,18 +31,10 @@ async def main() -> None:
         await crawler.run([start_url])
         base_data = await crawler.get_data()
 
-        def collect_user_data(key_name: str) -> list[str]:
-            """Извлекает уникальные значения из результатов парсинга по ключу."""
-            data_set = set()
-            for item in base_data.items:
-                for value in item.get(key_name):
-                    data_set.add(value)
-            return list(data_set) if data_set else []
-
         final_result = {
             'url': start_url,
-            'emails': collect_user_data('emails'),
-            'phones': collect_user_data('phones'),
+            'emails': collect_user_data(base_data.items, 'emails'),
+            'phones': collect_user_data(base_data.items, 'phones'),
         }
         print('Парсинг завершён!')
         print(final_result)

@@ -1,9 +1,8 @@
-import re
-
 from crawlee.crawlers import PlaywrightCrawlingContext
 from crawlee.router import Router
 
 from constants import BASE_OPTIONS, EMAIL_REG, PHONE_REG
+from utils import filter_data
 
 
 router = Router[PlaywrightCrawlingContext]()
@@ -33,11 +32,6 @@ async def user_data_handler(context: PlaywrightCrawlingContext) -> None:
     links_str = ' '.join(link_list)
 
     data_str = page_content + ' ' + links_str
-
-    def filter_data(regex: str, text: str) -> list[str]:
-        """Ищет совпадения и возвращает список уникальных строк."""
-        found = set(re.findall(regex, text))
-        return list(found) if found else []
 
     phones_list = filter_data(PHONE_REG, data_str)
     email_list = filter_data(EMAIL_REG, data_str)
