@@ -28,7 +28,7 @@ def test_url_validation(url, expected):
     'test_input, expected',
     [
         (
-            'Свяжитесь с лучшим кандидатом: ekaterinaponurova@ya.ru',
+            'Свяжитесь с разработчиком: ekaterinaponurova@ya.ru',
             ['ekaterinaponurova@ya.ru'],
         ),
         ('ekaterinaponurova@ya.ru', ['ekaterinaponurova@ya.ru']),
@@ -48,7 +48,7 @@ def test_email_regex(test_input, expected):
 @pytest.mark.parametrize(
     'test_input, expected',
     [
-        ('+7 (953) 177-08-46 (Екатерина, жду оффер)', ['+7 (953) 177-08-46']),
+        ('+7 (953) 177-08-46', ['+7 (953) 177-08-46']),
         ('+7 (953) 177-08-46', ['+7 (953) 177-08-46']),
         ('89531770846', ['89531770846']),
         ('79531770846', ['79531770846']),
