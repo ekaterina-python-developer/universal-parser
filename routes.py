@@ -21,7 +21,7 @@ async def user_data_handler(context: PlaywrightCrawlingContext) -> None:
     context.log.info(f'Парсим страницу: {context.request.url}')
 
     url = context.request.url
-    page_content = await context.page.content()
+    text_data = await context.page.inner_text('body')
     links = await context.page.locator('a').all()
 
     link_list = []
@@ -31,7 +31,7 @@ async def user_data_handler(context: PlaywrightCrawlingContext) -> None:
             link_list.append(href.strip())
     links_str = ' '.join(link_list)
 
-    data_str = page_content + ' ' + links_str
+    data_str = text_data + ' ' + links_str
 
     phones_list = filter_data(PHONE_REG, data_str)
     email_list = filter_data(EMAIL_REG, data_str)
